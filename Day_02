@@ -1,0 +1,49 @@
+# 📊 Day 2: Understanding Linear Regression
+
+Welcome to Day 2 of my 100 Consistent Days of Machine Learning challenge! 🚀  
+
+Today, I explored Linear Regression, one of the most fundamental Machine Learning algorithms.  
+
+### 🔎 What is Linear Regression? 
+Linear Regression is a supervised learning algorithm used for predicting continuous values based on input features.  
+💡 Key Idea: It finds the best-fit line (linear relationship) between independent variables (X) and dependent variable (Y).  
+
+
+### 📌 Mathematical Representation  
+A simple Linear Regression equation:  
+
+Y = mX + b
+
+where:  
+- Y = Predicted value (label)
+- X = Input feature  
+- m = Slope (determines how X affects Y)  
+- b = Intercept (the value of Y when X = 0)  
+
+💡 The goal is to find the best values of m and b that minimize the error.  
+
+
+### ⚙️ How Does It Work?  
+
+1️⃣ Model Training – The algorithm learns from labeled data (X, Y).  
+2️⃣ Finding the Best Line – It minimizes the Mean Squared Error (MSE).  
+3️⃣ Making Predictions – Once trained, it can predict Y for new values of X.  
+
+🔢 Example Use Cases:  
+✅ Predicting house prices based on size.  
+✅ Forecasting sales revenue based on ad spend.  
+✅ Estimating temperature based on humidity.  
+
+
+### 📈 Evaluating the Model  
+
+We measure the model’s accuracy using:  
+- Mean Squared Error (MSE) – Measures average squared differences between predicted and actual values.  
+- R² Score (Coefficient of Determination) – Measures how well the model fits the data (closer to 1, the better).  
+
+
+### 🎯 What’s Next?  
+For Day 3, I'll explore Multiple Linear Regression – extending today's concept to multiple input features! 🔥  
+
+📌 Follow my journey! Star ⭐ this repo & let’s learn together.  
+
