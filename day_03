@@ -1,0 +1,46 @@
+# 📊 Day 3: Multiple Linear Regression
+
+Welcome to Day 3 of my 100 Days of Machine Learning challenge! 🚀  
+
+Today, I explored Multiple Linear Regression, an extension of simple linear regression that can handle multiple input features.  
+
+
+### 🔎 What is Multiple Linear Regression?  
+Multiple Linear Regression (MLR) is a supervised learning algorithm that models the relationship between a dependent variable Y and multiple independent variables X₁, X₂, X₃,...Xₙ.  
+💡 Key Idea:  
+Instead of just one predictor (like simple linear regression), MLR uses two or more predictors to make better predictions.  
+
+### 📌 Mathematical Representation  
+The equation for Multiple Linear Regression:  
+
+Y = b_0 + b_1X_1 + b_2X_2 + ... + b_nX_n
+
+where:  
+- Y = Predicted output (target variable)  
+- X₁, X₂, ..., Xₙ = Input features (independent variables)  
+- b₀ = Intercept (the baseline value when all X’s are zero)  
+- b₁, b₂, ..., bₙ = Coefficients (how much each feature affects Y)  
+💡 The goal is to find the best values of b₀, b₁, b₂, ..., bₙ that minimize error.  
+
+
+### ⚙️ How Does It Work? 
+1️⃣ Model Training – The algorithm learns from multiple input features (X’s) and their corresponding outputs (Y).  
+2️⃣ Finding the Best Fit – It minimizes Mean Squared Error (MSE) to get the best coefficients.  
+3️⃣ Making Predictions – Once trained, it can predict Y for new inputs.  
+
+🔢 Example Use Cases:  
+✅ Predicting house prices based on size, number of rooms, and location.  
+✅ Forecasting sales revenue based on advertising spend on TV, radio, and social media.  
+✅ Estimating student grades based on study hours, attendance, and previous scores.  
+
+
+### 📈 Evaluating the Model 
+To measure how well the model performs, we use:  
+- Mean Squared Error (MSE) – Measures average squared differences between predicted and actual values.  
+- R² Score – Shows how much variance in Y is explained by X’s. (Closer to 1, the better).  
+
+
+### 🎯 What’s Next?  
+For Day 4, I’ll explore Logistic Regression, which is used for classification problems! 🔥  
+
+📌 Follow my journey! Star ⭐ this repo & let’s learn together.  
