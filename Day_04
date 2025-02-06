@@ -1,0 +1,37 @@
+### 📌 Day 4: Logistic Regression  
+
+Welcome to Day 4 of my 100 Days of Machine Learning challenge! 🚀  
+
+Today’s focus is Logistic Regression, a fundamental algorithm for classification problems. Unlike Linear Regression, which predicts continuous values, Logistic Regression predicts categorical outcomes (e.g., Yes/No, Spam/Not Spam, 0/1).  
+
+
+## 🔎 What is Logistic Regression?
+Logistic Regression is a supervised learning algorithm used for binary classification (i.e., problems with only two possible outcomes). It estimates the probability that a given input belongs to a specific category.  
+
+💡 Example Use Cases: 
+✅ Email classification: Spam or Not Spam
+✅ Disease prediction: Has disease or Not  
+✅ Credit risk: Default or No Default
+
+### 🔢 Mathematical Representation  
+Instead of a straight-line equation like in Linear Regression, Logistic Regression applies the Sigmoid Function (σ) to map outputs between 0 and 1:  
+where:  
+- P(Y=1|X)= Probability that Y belongs to class 1  
+- b₀, b₁, ..., bₙ = Model parameters (weights & bias)  
+- X₁, X₂, ..., Xₙ = Input features  
+- e = Euler’s number (~2.718)  
+
+If P(Y=1|X) ≥ 0.5, we classify it as 1; otherwise, we classify it as 0.  
+
+
+## ⚙️ How Does It Work?**  
+1️⃣ Transform Linear Regression Output – Instead of predicting continuous values, the sigmoid function squashes outputs between 0 and 1.  
+2️⃣ Threshold Decision – If the probability is greater than 0.5, classify it as 1; otherwise, 0.  
+3️⃣ Optimize Model Parameters – Uses techniques like Gradient Descent to minimize the Log Loss function.  
+
+
+## 📈 Evaluating the Model  
+To assess how well Logistic Regression performs, we use:  
+- Accuracy – Measures correct predictions.  
+- Precision & Recall – Helps in imbalanced datasets.  
+- ROC Curve & AUC Score – Measures how well the model distinguishes classes.  
