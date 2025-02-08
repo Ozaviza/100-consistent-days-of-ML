@@ -1,0 +1,76 @@
+###📌 Day 5: Gradient Descent  
+
+Welcome to Day 5 of my 100 Consistent Days of Machine Learning challenge! 🚀  
+
+Today’s focus is Gradient Descent, an essential optimization algorithm used to minimize the cost function in machine learning models.  
+
+
+## 🔎 What is Gradient Descent?  
+Gradient Descent is an iterative optimization technique used to find the optimal parameters (weights and biases) that minimize the cost function (error/loss) in machine learning models.  
+
+💡 Why is it important?  
+- Helps models learn efficiently by updating parameters step by step.  
+- Used in Linear Regression, Logistic Regression, Neural Networks, etc. 
+- Essential for deep learning where the number of parameters is massive.  
+
+
+## 📉 How Does Gradient Descent Work?  
+1️⃣ Initialize Weights and Biases – Start with random values.  
+2️⃣ Compute the Cost Function – Measure how far predictions are from actual values.  
+3️⃣ Compute the Gradient (Derivative) – Find the direction to move in order to reduce the error.  
+4️⃣ Update Parameters – Adjust weights & biases using the formula:  
+θ = θ - α.dJ/dθ
+where:  
+- θ = Model parameters (weights & biases)  
+- α (alpha) = Learning rate (step size)  
+- dJ/dθ = Gradient of the cost function  
+5️⃣ Repeat Until Convergence – Keep updating until the error is minimized.  
+
+
+## 🛠 Types of Gradient Descent  
+✅ Batch Gradient Descent (BGD) – Uses the entire dataset for each update.  
+✅ Stochastic Gradient Descent (SGD) – Uses a single data point per update (faster but noisier).  
+✅ Mini-Batch Gradient Descent – Uses small batches of data for updates (balance between BGD & SGD).  
+
+
+## 📈 Learning Rate & Challenges 
+Choosing the right learning rate (α) is crucial:  
+🔹 Too large → Jumps around, never converges.  
+🔹 Too small → Slow learning, takes forever to converge.  
+🔹 Optimal → Fast and smooth convergence.  
+
+Common challenges:  
+⚠️ Getting stuck in local minima (especially in non-convex functions).  
+⚠️ Vanishing gradients in deep networks (solved using optimizers like Adam).  
+
+
+## 📌 Python Implementation  
+Here’s a simple Gradient Descent implementation using NumPy:  
+
+```python
+import numpy as np
+
+# Sample data (X: input, y: output)
+X = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 6, 8, 10])
+
+# Initialize parameters
+theta = 0  # Initial weight
+alpha = 0.01  # Learning rate
+iterations = 1000  # Number of updates
+
+# Gradient Descent Algorithm
+for i in range(iterations):
+    gradient = np.dot(X, (np.dot(X, theta) - y)) / len(X)
+    theta = theta - alpha * gradient  # Update weight
+
+print(f"Optimized theta (weight): {theta}")
+```
+
+
+## 🚀 Key Takeaways  
+✅ Gradient Descent optimizes models by minimizing the cost function.  
+✅ Learning rate controls step size – too large/small can cause issues.  
+✅ Used in almost all ML models, including deep learning.  
+
+That’s it for Day 5! Stay tuned for Day 6! 🚀
