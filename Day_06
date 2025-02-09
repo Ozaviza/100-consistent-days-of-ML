@@ -1,0 +1,71 @@
+### 📌 Day 6: Cost Function in Machine Learning  
+
+Welcome to Day 6 of my 100 Consistent Days of Machine Learning challenge! 🚀  
+Today’s focus is Cost Function, a crucial concept that helps machine learning models evaluate how well they are performing.  
+
+
+## 🔎 What is a Cost Function?
+A cost function is a mathematical function that measures the difference between the predicted output of a model and the actual output.  
+💡 Why is it important? 
+- It helps determine how well the model is performing.  
+- The goal of ML models is to minimize the cost function (i.e., reduce errors).  
+- Used in optimization techniques like Gradient Descent to update model parameters.  
+
+
+## 📉 Common Types of Cost Functions  
+
+### 1️⃣ Mean Squared Error (MSE) (for Regression Models)  
+Used in linear regression and other regression-based models. 
+MSE = (1/n) * Σ (yi - ŷi)²
+- yi = Actual value  
+- ŷi = Predicted value  
+- n = Number of data points  
+✅ Why use MSE? 
+- Penalizes larger errors more than smaller ones.  
+- Differentiable, making it useful for optimization.  
+⚠️ Issue: Sensitive to outliers due to squaring of errors.  
+
+
+### 2️⃣ Mean Absolute Error (MAE) (for Regression Models) 
+An alternative to MSE that takes the absolute difference.  
+MAE = (1/n) * Σ |yi - ŷi|
+✅ Less sensitive to outliers than MSE.  
+⚠️ Disadvantage: Harder to optimize because it lacks a squared term.  
+
+
+### 3️⃣ Cross-Entropy Loss (for Classification Models) 
+Used in classification tasks, especially logistic regression and neural networks.  
+J = (-1/n) * Σ [ yi * log(ŷi) + (1 - yi) * log(1 - ŷi) ]
+✅ Why use Cross-Entropy?  
+- Works well for probability-based models (like logistic regression).  
+- Helps models differentiate between correct and incorrect classifications.  
+⚠️ Disadvantage: May cause vanishing gradients in deep networks.  
+
+
+## 📈 Cost Function vs. Loss Function  
+- Cost Function: The average loss over the entire dataset.  
+- Loss Function: The error for a single data point.  
+🔹 Example: MSE is a cost function, while squared error for one sample is a loss function.  
+
+
+## 🛠 Python Implementation    
+```python
+import numpy as np
+
+# Actual and predicted values
+y_actual = np.array([2, 4, 6, 8, 10])
+y_predicted = np.array([2.2, 3.8, 6.1, 7.9, 9.5])
+
+# Mean Squared Error
+MSE = np.mean((y_actual - y_predicted) ** 2)
+
+print(f"Mean Squared Error: {MSE}")
+```
+
+
+## 🚀 Key Takeaways  
+✅ The cost function measures model performance.  
+✅ The goal is to minimize the cost function to improve accuracy.  
+✅ Different types of cost functions are used for regression and classification models.  
+
+That’s it for Day 6! Stay tuned for Day 7! 🚀
