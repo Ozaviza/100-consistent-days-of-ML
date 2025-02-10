@@ -1,0 +1,87 @@
+# 📌 Day 7: Gradient Descent in Machine Learning
+
+Welcome to Day 7 of my 100 Days of Machine Learning challenge! 🚀  
+Today’s focus is Gradient Descent, one of the most fundamental optimization algorithms in machine learning.
+
+
+## 🔎 What is Gradient Descent?  
+Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively updating model parameters in the direction of the steepest descent.
+💡 Why do we use it?  
+- Helps find the best parameters (weights and biases) for a model.  
+- Reduces the error of a machine learning model by minimizing the cost function.  
+- Works well for large datasets and complex models.  
+
+
+## 📉 How Gradient Descent Works  
+1. Compute the Gradient  
+   - The gradient is the derivative of the cost function with respect to the parameters.  
+   - It tells us the direction in which the cost function is increasing or decreasing.  
+2. Update the Parameters  
+   - Move in the opposite direction of the gradient to minimize the cost.  
+   - The learning rate controls how big the steps are.  
+3. Repeat Until Convergence  
+   - Continue updating until the cost function stabilizes or reaches a minimum value.  
+
+
+## 📌 Gradient Descent Formula  
+For a parameter θ (like weight 𝑤 or bias 𝑏)
+θ = θ - α * (∂J / ∂θ)
+where:  
+- θ = Model parameter (weight or bias)  
+- α = Learning rate  
+- (∂J / ∂θ) = Derivative of cost function  
+💡 Think of it like descending a hill ⛰️ — take small steps in the downward direction until you reach the bottom!
+
+
+## 🛠 Types of Gradient Descent  
+
+1️⃣ Batch Gradient Descent 
+   - Uses all training samples to compute the gradient.  
+   - Slow for large datasets.  
+   - More stable but computationally expensive.  
+2️⃣ Stochastic Gradient Descent (SGD)  
+   - Updates parameters using one sample at a time.  
+   - Faster but noisy (fluctuates a lot).  
+3️⃣ Mini-Batch Gradient Descent  
+   - Uses a small batch of data (e.g., 32 or 64 samples).  
+   - Balances efficiency and stability.  
+   - Commonly used in deep learning.  
+
+
+## 📌 Python Implementation  
+
+```python
+import numpy as np
+
+# Sample Data
+X = np.array([1, 2, 3, 4, 5])  # Input features
+y = np.array([2, 4, 6, 8, 10])  # Target values
+
+# Initialize parameters
+w = 0  # Weight
+b = 0  # Bias
+alpha = 0.01  # Learning rate
+epochs = 1000  # Number of iterations
+
+# Gradient Descent
+for i in range(epochs):
+    y_pred = w * X + b  # Predicted values
+    error = y_pred - y  # Error
+    
+    # Compute gradients
+    dw = (2/len(X)) * sum(error * X)
+    db = (2/len(X)) * sum(error)
+    
+    # Update parameters
+    w = w - alpha * dw
+    b = b - alpha * db
+
+print(f"Final Weight: {w}, Final Bias: {b}")
+```
+
+## 🚀 Key Takeaways  
+✅ Gradient Descent is used to minimize the cost function.  
+✅ The learning rate controls step size — too high ⏫ can overshoot, too low ⏬ is slow.  
+✅ Different types (Batch, Stochastic, Mini-Batch) have trade-offs in speed and stability.  
+
+That’s it for Day 7! Stay tuned for Day 8! 🚀  
