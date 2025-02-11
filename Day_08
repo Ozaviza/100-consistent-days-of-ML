@@ -1,0 +1,68 @@
+# 📌 Day 8: Cost Function in Machine Learning  
+
+Welcome to Day 8 of my 100 Days of Machine Learning challenge! 🚀  
+Today, I’m diving into the Cost Function, an essential concept in training machine learning models.  
+
+
+## 📖 What is a Cost Function?  
+A cost function measures how well a machine learning model performs by quantifying the difference between predicted values and actual values.  
+💡 Goal: Minimize the cost function to improve the model's accuracy.  
+
+
+## 📌 Types of Cost Functions  
+
+### 1️⃣ Mean Squared Error (MSE) - For Regression  
+The Mean Squared Error (MSE) is commonly used in regression tasks. It calculates the average squared difference between actual and predicted values.  
+ MSE = (1/n) * Σ (y_i - ŷ_i)^2
+Where:  
+- y_i = Actual value  
+- ŷ_i = Predicted value  
+- n = Number of data points  
+💡 Why Squared?  
+- Penalizes large errors more heavily.  
+- Ensures the cost is always positive.  
+
+### 2️⃣ Mean Absolute Error (MAE) - For Regression  
+Instead of squaring the errors, Mean Absolute Error (MAE) takes the absolute difference.  
+MAE = (1/n) * Σ |y_i - ŷ_i|
+💡 Key Difference from MSE  
+- MAE is less sensitive to large errors than MSE.  
+- MSE penalizes larger errors more due to squaring.  
+
+### 3️⃣ Binary Cross-Entropy - For Classification  
+Used in binary classification (e.g., predicting Yes/No, 0/1).  
+J = -(1/n) * Σ [ y_i * log(ŷ_i) + (1 - y_i) * log(1 - ŷ_i) ]
+💡 Why Logarithm?  
+- Logarithmic functions magnify small errors, improving model training.  
+
+### 4️⃣ Categorical Cross-Entropy - For Multi-Class Classification  
+Used for multi-class classification problems.  
+J = - Σ Σ y_ij * log(ŷ_ij)
+Where:  
+- k = Number of classes  
+- y_ij = Actual class label (1 for correct class, 0 otherwise)  
+- ŷ_ij = Predicted probability for class j 
+
+
+## 📌 Python Implementation of MSE 
+
+```python
+import numpy as np
+
+# Sample Data
+y_actual = np.array([2, 4, 6, 8])
+y_pred = np.array([2.5, 3.8, 5.9, 7.5])
+
+# Mean Squared Error Calculation
+mse = np.mean((y_actual - y_pred) ** 2)
+
+print(f"Mean Squared Error: {mse:.4f}")
+```
+
+
+## 🚀 Key Takeaways 
+✅ Cost functions quantify prediction errors in machine learning models.  
+✅ MSE is common in regression, while Cross-Entropy is used in classification.  
+✅ The goal of training is to minimize the cost function for better accuracy.  
+
+That’s it for Day 8! Stay tuned for Day 9! 🚀
